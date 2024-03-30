@@ -1,0 +1,87 @@
+/* Reset default margin and padding */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e9d700;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Style for headings */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Style for form container */
+form {
+    background: #a98600;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    max-width: 400px;
+    margin: 40px auto; /* Increased top and bottom margin */
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+}
+
+/* Style for labels */
+label {
+    display: block;
+    margin-top: 10px;
+    color: black; /* Darker color for better readability */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Style for input fields */
+input[type="number"],
+input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 15px;
+    border: 1px solid #ccc; /* Lighter border color */
+    box-sizing: border-box;
+    transition: border-color 0.5s; /* Smooth border transition */
+}
+
+/* Enhance focus state for input fields */
+input[type="number"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: black; /* Highlight color when focused */
+}
+
+/* Style for submit button */
+input[type="submit"] {
+    background-color: #a98600;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid #fff9ae;
+    cursor: pointer;
+    margin: 20px auto 0; /* Center the button horizontally with auto margins */
+    padding: 12px 20px; /* Larger padding for better touch area */
+    font-size: 16px; /* Larger font size */
+    transition: background-color 0.3s, transform 0.3s; /* Add transform transition */
+    display: block; /* Ensure the button takes up full width */
+}
+
+/* Hover and active effect for submit button */
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    background-color: #f8ed62;
+    transform: scale(1.05); /* Slightly increase size on hover/active */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        margin: 20px auto; /* Adjust margins for smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller font size on smaller screens */
+    }
+}

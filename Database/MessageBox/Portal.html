@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omada Portal</title>
+</head>
+<body>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+ 
+
+<form id="form" method="post">
+
+ 
+
+    <div><span>username:</span><input type="text" name="username"/> </div>
+
+ 
+
+    <div><span>password:</span><input type="password" name="password"/></div>
+
+ 
+
+    <div style="display:none"><span>clientMac:</span><input type="text" id="cid" name="clientMac" /></div>
+
+ 
+
+    <button type="submit">submit</button>
+
+ 
+
+</form>
+
+ 
+
+ 
+
+ 
+
+<script type="text/javascript">
+
+ 
+
+var submitUrl = "http://" + getQueryString("target") + "/portal/auth";
+
+ 
+
+document.getElementById("form").action = submitUrl;
+
+ 
+
+document.getElementById("cid").value = getQueryString("clientMac");
+
+ 
+
+function getQueryString(name) {
+
+ 
+
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+
+ 
+
+    var r = window.location.search.substr(1).match(reg);
+
+ 
+
+    if (r != null) return unescape(r[2]); return null;
+
+ 
+
+}
+
+ 
+
+</script>
+</body>
+</html>
