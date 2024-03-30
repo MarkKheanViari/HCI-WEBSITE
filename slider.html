@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slider.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="home-image">
+        <div class="image">
+            <div class="single-image">
+                <img src="1.png" alt="Image 1">
+            </div>
+            <div class="single-image">
+                <img src="2.png" alt="Image 2">
+            </div>
+            <div class="single-image">
+                <img src="3.png" alt="Image 3">
+            </div>
+            <div class="single-image">
+                <img src="4.png" alt="Image 4">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#60;</button> <!-- This is for '<' symbol -->
+        <button class="next" onclick="nextSlide()">&#62;</button> <!-- This is for '>' symbol -->
+    </div>
+    
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.single-image');
+        const totalSlides = slides.length;
+        
+        function showSlide() {
+            slides.forEach(slide => {
+                slide.style.display = 'none';
+            });
+        
+            slides[index].style.display = 'block';
+        }
+        
+        function prevSlide() {
+            index = (index - 1 + totalSlides) % totalSlides;
+            showSlide();
+        }
+        
+        function nextSlide() {
+            index = (index + 1) % totalSlides;
+            showSlide();
+        }
+        
+        showSlide();
+    </script>    
+</body>
+</html>
+
